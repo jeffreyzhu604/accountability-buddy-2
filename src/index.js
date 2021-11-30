@@ -9,6 +9,13 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
+const proxy = require('http-proxy-middleware')
+
+module.exports = function(app) {
+    // add other server routes to path array
+    app.use(proxy(['/api' ], { target: 'http://localhost:5000' }));
+}
+
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
