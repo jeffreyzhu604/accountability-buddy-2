@@ -1,0 +1,169 @@
+/* Navigation bar styling */
+a {
+    text-decoration: none;
+    color: #3e3e3b;
+    display: block;
+    padding: 15px;
+}
+
+.nav-home {
+    color: #3e3e3b;
+    position: relative;
+    margin-top: -0.25%;
+    background-color: #a2aab0;
+}
+
+.nav-home li {
+    display: inline-block;
+    margin-left: 4%;
+    font-size: medium;
+}
+
+.nav-home li:hover {
+    background-color: #cbc5c1;
+    transition-duration: 0.7s;
+}
+
+
+/* Form styling */
+form {
+    color: #3e3e3b;
+    background-color: #a2aab0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    margin-bottom: 2%;
+    margin-top: 10%;
+}
+
+form h2 {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+}
+
+#contact p a {
+    color: blue;
+    display: inline;
+}
+
+/* Button styling */
+.button-nav {
+    transition-duration: 0.4s;
+}
+  
+.button-nav:hover {
+    background-color: #cbc5c1;
+    color: #3e3e3b;
+}
+
+.button-nav {
+    background-color: #3e3e3b; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buttons {
+    background-color: white; 
+    color: #3e3e3b; 
+    border: 2px solid #3e3e3b;
+}
+
+.button-logout {
+    color: #3e3e3b;
+    background-color: #a2aab0;
+    display: block;
+    padding: 14px;
+    font-size: medium;
+    border: none;
+    background: none;
+}
+
+/* Home page */
+.home {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  #ebeced;
+}
+
+/* Profile styling */
+.profile-content {
+    margin-top: 5%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    background-color: #ebeced;
+}
+
+/* Search bar */
+.search-bar {
+    color: #3e3e3b;
+    background-color: #a2aab0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    margin-bottom: 2%;
+    margin-top: 10%;
+}
+
+/* Input tag styling */
+input {
+    border: none;
+    appearance: none;
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 5px;
+    width: 95%;
+    outline: none;
+}
+
+/* User list styling */
+.user-list {
+    margin-top: 15%;
+}
+
+.user-list-description {
+    margin-left: 15%;
+}
+
+.card img {
+    float: left;
+}
+
+.card-child {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    text-align: left;
+    background-color: white;
+    color: #3e3e3b;
+    padding: 20px;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.card:hover {
+    transform: scale(1.001);
+    box-shadow: 1px 1px 5px #304129; 
+}
+
+.cards {
+    margin-top: -15%;
+}
