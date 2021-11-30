@@ -14,21 +14,6 @@ app.use(express.json()); // Ensure the data that we send and receive from server
 app.use(userRouter);
 app.use(agreementRouter);
 
-//Non api requests in production
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-    // Add production middleware such as redirecting to https
-
-    // Express will serve up production assets i.e. main.js
-    app.use(express.static(__dirname + '/client/build'));
-    // If Express doesn't recognize route serve index.html
-    const path = require('path');
-    app.get('*', (req, res) => {
-        res.sendFile(
-            path.resolve(__dirname, 'client', 'build', 'index.html')
-        );
-    });
-}
-
 app.listen(PORT, (req, res) => {
     console.log(`Server started at PORT ${PORT}`);
 });
