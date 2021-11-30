@@ -26,7 +26,7 @@ export const setLoading = () => {
 export const login = credentials => async dispatch => {
     try {
         setLoading();
-        const loginInfo = await axios.post("/login", credentials);
+        const loginInfo = await axios.post("/api/login", credentials);
         dispatch({
             type: LOG_IN,
             payload: {
@@ -63,7 +63,7 @@ export const updateFriends = (payload) => {
 
 export const getUsers = () => async dispatch => {
     try {
-        const users = await axios.get("/users/all");
+        const users = await axios.get("/api/users/all");
         dispatch({
             type: GET_USERS,
             payload: users.data
@@ -78,7 +78,7 @@ export const getUsers = () => async dispatch => {
 
 export const addUser = friends => async dispatch => {
     try {
-        const updates = await axios.put("/add-friend", {
+        const updates = await axios.put("/api/add-friend", {
             activeUser: friends.activeUser,
             _id: friends._id
         });
@@ -112,7 +112,7 @@ export const addUser = friends => async dispatch => {
 
 export const removeUser = friends => async dispatch => {
     try {
-        const updates = await axios.put("/remove-friend", {
+        const updates = await axios.put("/api/remove-friend", {
             activeUser: friends.activeUser,
             _id: friends._id
         });
@@ -146,7 +146,7 @@ export const addAgreement = agreement => async dispatch => {
     try {
         setLoading();
         console.log(agreement);
-        const agreementData = await axios.post("/create-agreement", agreement);
+        const agreementData = await axios.post("/api/create-agreement", agreement);
         console.log(agreementData.data);
         dispatch({
             type: CREATE_AGREEMENT,
@@ -169,7 +169,7 @@ export const resetActiveAgreement = () => {
 export const getAgreement = () => async dispatch => {
     try {
         setLoading();
-        const agreements = await axios.get("/agreement");
+        const agreements = await axios.get("/api/agreement");
         console.log(agreements.data);
         dispatch({
             type: GET_AGREEMENT,
